@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -exec sh -c 'echo "${1%.*}"' _ {} \; | LC_ALL=C sort -f
+find . -type f -iname '*.gif' -printf '%s %p\n' | sort -f -k1n | awk '{print substr($0,index($0,$2))}'
