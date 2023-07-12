@@ -1,2 +1,2 @@
 #!/bin/bash
-"rev"
+echo "Enter a string: " read input echo "$input" | rev
